@@ -13,7 +13,7 @@ contract Geocache {
   VisitorLog[] public visitorLogs;
 
   // because no optional params, interface has to send all fields. if field is empty, send empty string.
-  function createLog(address _visitor, string _name, string _dateTime, string _location, string _note, string _imageUrl) public {
+  function createLog(string _name, string _dateTime, string _location, string _note, string _imageUrl) public {
     visitorLogs.push(VisitorLog(msg.sender, _name, _dateTime, _location, _note, _imageUrl));
   }
 
